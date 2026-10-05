@@ -1,0 +1,33 @@
+{
+  "name": "desafio-tecnico-target",
+  "version": "1.0.0",
+  "description": "Desafio tecnico: calculo de comissao, controle de estoque e juros por atraso",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/cli.js",
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "ex1": "tsx src/exercicio1.ts",
+    "ex2": "tsx src/exercicio2.ts",
+    "ex3": "tsx src/exercicio3.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json && node -e \"require('node:fs').cpSync('src/data','dist/data',{recursive:true})\"",
+    "start:dist": "node dist/cli.js"
+  },
+  "keywords": [
+    "desafio-tecnico",
+    "typescript",
+    "cli"
+  ],
+  "dependencies": {
+    "decimal.js": "^10.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.3"
+  }
+}
